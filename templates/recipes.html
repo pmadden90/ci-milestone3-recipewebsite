@@ -1,7 +1,8 @@
 {% extends 'base.html' %} {% block content %}
-    <h1> Recipes Will Be Here</h1>
+    
     {% for dessert in recipes %}
-        {{dessert.recipe_name}}
+      <h1>  {{dessert.recipe_name}}</h1> 
+      <br>
         {{dessert.recipe_description}}
         {{dessert.date_submitted}}
         {{dessert.contains_nuts}}
