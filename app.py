@@ -20,6 +20,10 @@ mongo = PyMongo(app)
 def get_recipes():
     return render_template("recipes.html", recipes=mongo.db.desserts.find())
 
+@app.route('/add_recipe')
+def add_recipe():
+    return render_template("addrecipe.html", recipes=mongo.db.desserts.find())
+
 if __name__ == '__main__':
     app.run(host=os.environ.get('IP'), 
         port=int(os.environ.get('PORT', 5000)),
