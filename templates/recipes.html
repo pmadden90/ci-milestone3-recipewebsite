@@ -1,12 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-</head>
-<body>
+{% extends 'base.html' %} {% block content %}
     <h1> Recipes Will Be Here</h1>
     {% for dessert in recipes %}
         {{dessert.recipe_name}}
@@ -16,5 +8,18 @@
         {{dessert.gluten_free}}
         {{dessert.vegan_friendly}}
     {% endfor %}
-</body>
-</html>
+     <ul class="collapsible">
+    <li>
+      <div class="collapsible-header"><i class="material-icons">local_dining</i>Equipment Needed</div>
+      <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
+    </li>
+    <li>
+      <div class="collapsible-header"><i class="material-icons">list</i>Ingredients</div>
+      <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
+    </li>
+    <li>
+      <div class="collapsible-header"><i class="material-icons">timer</i>Method</div>
+      <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
+    </li>
+  </ul>
+{% endblock %}
